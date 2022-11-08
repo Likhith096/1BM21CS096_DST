@@ -1,11 +1,11 @@
 #include<stdio.h>
-#define stack_size 10;
+#define stack_size 10
 int st[10],item;
 int top=-1;
 
 void push()
 {
- if(top==stack_size)
+ if(top==stack_size-1)
  printf("STACK OVERFLOW \n ");
  else
 {
