@@ -58,6 +58,11 @@ struct Node *delete_specific_val(struct Node *first,int data)
             printf("The deleted item is %d \n",p->value);
             free(p);
         }
+        else
+        {
+            printf("\nValue not found!Open eyes and enter next time!\n");
+            break;
+        }
         q=p;
         p=p->next;
     }
