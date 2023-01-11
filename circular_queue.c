@@ -28,16 +28,16 @@ int delete_front(int q[] , int *r , int *f , int *count)
     }
 }
 
-void display(int q[] , int *r , int *count)
+void display(int q[] , int *f,int *r , int *count)
 {
-    int temp;
+    int temp=*f;
     if(*count == 0)
         printf("Queue underflow\n");
     else
     {
         for(int i= 0 ; i<*count ; i++)
         {
-            printf("%d\n ",q[i]);
+            printf("%d\n ",q[temp]);
             temp =temp+1;
             temp = temp%qsize;
         }
@@ -64,7 +64,7 @@ int main()
                 
         case 2: printf("The deleted value is %d \n" ,delete_front(q,&r,&f,&count));
                 break;
-        case 3: display(q,&r,&count);
+        case 3: display(q,&f,&r,&count);
                 break;
         case 4: exit(0);
         default: printf("Wrong case entered!");
